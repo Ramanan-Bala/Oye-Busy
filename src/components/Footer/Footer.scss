@@ -1,0 +1,60 @@
+.footer {
+  display: none;
+  color: white;
+  background: #343434;
+  padding: 50px 200px 10px 200px;
+
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 13px;
+  line-height: 20px;
+  letter-spacing: 0.08em;
+  .sl {
+    div {
+      display: grid;
+      grid-template-columns: 150px 1fr;
+      gap: 10px;
+      margin-bottom: 50px;
+    }
+  }
+  .links {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-bottom: 50px;
+    span {
+      transition: all 0.2s ease-in-out;
+      &:hover {
+        color: #2aeaee;
+        cursor: pointer;
+      }
+    }
+  }
+  .contact {
+    display: flex;
+    justify-content: center;
+    gap: 150px;
+    margin-bottom: 30px;
+    div h1 {
+      color: #2aeaee;
+      margin-bottom: 15px;
+    }
+  }
+  .sm {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    margin-bottom: 30px;
+  }
+  h5 {
+    font-size: smaller;
+    text-align: center;
+  }
+}
+
+@media (min-width: 768px) {
+  .footer {
+    display: block;
+  }
+}

@@ -1,0 +1,171 @@
+.container {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 20px;
+  margin-bottom: 50px;
+
+  .heading {
+    color: #353535;
+    font-weight: 500;
+    font-size: 30px;
+  }
+}
+
+.img-container {
+  display: none;
+  position: relative;
+  z-index: 10;
+  max-width: max-content;
+  .heading {
+    color: white;
+    font-weight: 700;
+    font-size: 48px;
+  }
+}
+
+.heading {
+  font-family: "Montserrat";
+  font-style: normal;
+  line-height: 59px;
+  text-align: center;
+}
+
+.middle {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  text-align: center;
+  z-index: 20;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.examples {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 900;
+  font-size: 17.4521px;
+  line-height: 20px;
+
+  color: #ffffff;
+  span {
+    text-decoration-line: underline;
+  }
+}
+
+.search {
+  width: 632px;
+  height: 61px;
+  background: #ffffff;
+  border-radius: 4.9863px;
+
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px;
+  margin-bottom: 15px;
+
+  input {
+    height: 100%;
+    width: 100%;
+    outline: none;
+  }
+}
+
+.lookingFor {
+  grid-column: span 2 / span 2;
+  .heading {
+    display: none;
+  }
+  display: flex;
+  flex-direction: column-reverse;
+}
+
+.discount {
+  display: none;
+  justify-content: flex-end;
+  div {
+    padding: 5px 15px;
+    margin: 5px 0;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    max-width: max-content;
+    color: white;
+    font-weight: 500;
+    background: #e8625d;
+  }
+}
+
+.items {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 48px;
+  margin: 20px 50px;
+  div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.2s ease-in-out;
+    border-radius: 10px;
+    &:hover {
+      scale: 1.1;
+      box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1),
+        0 2px 4px -2px rgb(0 0 0 / 0.1);
+    }
+    span {
+      font-size: 10px;
+      text-align: center;
+    }
+    img {
+      height: 55px;
+      width: 55px;
+    }
+  }
+}
+
+.card {
+  display: flex;
+  gap: 10px;
+  overflow: scroll;
+  scroll-snap-type: x mandatory;
+  margin-bottom: 20px;
+  img {
+    scroll-snap-align: center;
+    width: 230px;
+    height: 120px;
+  }
+}
+
+@media (min-width: 768px) {
+  .img-container {
+    display: block;
+  }
+  .lookingFor {
+    grid-column: span 1 / span 1;
+    flex-direction: column;
+    .heading {
+      display: block;
+    }
+  }
+  .discount {
+    display: flex;
+  }
+  .items {
+    gap: 80px;
+    div span {
+      font-size: 15px;
+    }
+  }
+  .card {
+    margin-bottom: 0;
+    img {
+      width: 380px;
+      height: 200px;
+    }
+  }
+}
